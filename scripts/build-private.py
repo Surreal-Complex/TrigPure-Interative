@@ -1,10 +1,23 @@
-"""Build the read-only REA deployment. Requires Python 3 and Pandoc."""
+"""Build the private preview or the public GitHub Pages edition."""
+from argparse import ArgumentParser
 from html import escape
 from pathlib import Path
 import re
 from shutil import copy2, copytree, rmtree
 from subprocess import run
+from urllib.parse import urlsplit
 
+parser = ArgumentParser(description="Monta os arquivos estáticos em dist/.")
+parser.add_argument("--public-url", help="URL HTTPS da edição pública no GitHub Pages.")
+public_url = parser.parse_args().public_url
+if public_url:
+    public_url = public_url.rstrip("/") + "/"
+    destination = urlsplit(public_url)
+    if (destination.scheme != "https" or not destination.hostname
+            or destination.username or destination.password or destination.query or destination.fragment):
+        parser.error("--public-url deve ser um endereço HTTPS sem credenciais, consulta ou fragmento.")
+
+private_url = "https://trigonometria-interativa.pastelkey1.chatgpt.site/"
 root = Path(__file__).resolve().parents[1]
 dist = root / "dist"
 documents = (
@@ -20,7 +33,8 @@ for name in ("index.html", "404.html", "palacio-trigonometrico.html", "favicon.i
     copy2(root / name, dist / name)
 for name in ("assets", "conteudos", "estudar", "explorar", "jogar", "jogos", "materiais", "praticar", "professores", "sobre"):
     copytree(root / name, dist / name)
-(dist / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
+if not public_url:
+    (dist / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
 
 def document_link(match):
     name = match[1]
@@ -67,3 +81,12 @@ for name in documents:
 </body>
 </html>
 """, encoding="utf-8")
+
+if public_url:
+    for path in (*dist.rglob("*.html"), dist / "CITATION.cff", dist / "sitemap.xml"):
+        text = path.read_text(encoding="utf-8").replace(private_url, public_url)
+        if path == dist / "404.html":
+            text = re.sub(r'((?:href|src)="/)(?!/)', lambda match: match[1][:-1] + destination.path, text)
+        else:
+            text = text.replace('<meta name="robots" content="noindex,nofollow">', "")
+        path.write_text(text, encoding="utf-8")

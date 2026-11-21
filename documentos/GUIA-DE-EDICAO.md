@@ -41,6 +41,11 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
 
 Abra no navegador `http://127.0.0.1:8000/`. Altere as fontes na raiz e regenere `dist/`. O arquivo `.github/workflows/validacao-site.yml` repete a montagem e as verificações no GitHub. O [guia de validação](GUIA-DE-VALIDACAO-FINAL.md) descreve os testes manuais.
 
-Após aprovar o pull request, publique a mesma revisão de `main` no projeto privado de hospedagem. A plataforma recebe o diretório `dist/`, com o manifesto `.openai/hosting.json` que identifica o projeto. Integrar uma mudança no GitHub, isoladamente, não publica a revisão na hospedagem privada. Confira a versão servida, a aba Sobre e a central documental após publicar.
+Quando a revisão estiver na branch `main`, entre no repositório com a conta proprietária e abra **Actions → Publicar no GitHub Pages → Run workflow**, selecionando `main`. A publicação depende dessa ação do proprietário. O processo monta os arquivos estáticos, testa os links e envia somente a pasta `dist/` ao Pages. Depois da execução, confira o endereço divulgado em **Settings → Pages**, incluindo a página Sobre e a central documental. Para preparar uma compilação pública local, passe `--public-url` com a URL HTTPS do Pages ao script Python e informe o subcaminho ao validador. Por exemplo:
+
+```sh
+python3 scripts/build-private.py --public-url https://surreal-complex.github.io/TrigPure-Interative/
+node scripts/validar-site.mjs dist /TrigPure-Interative
+```
 
 A edição anterior do TrigTest está disponível em [um ZIP integral](historico-trigtest-46c1ea4.zip). Para a edição vigente, use este guia, a auditoria atual e os arquivos da branch `main`.

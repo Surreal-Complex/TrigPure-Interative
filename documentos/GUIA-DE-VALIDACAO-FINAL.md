@@ -2,7 +2,7 @@
 
 **Situação:** lista de verificações humanas e editoriais pendentes. Esta página não é certificado de acessibilidade, conformidade jurídica ou correção matemática. Atualizada em 19/11/2026.
 
-**Site privado:** https://trigonometria-interativa.pastelkey1.chatgpt.site/
+**Site desta edição:** https://trigonometria-interativa.pastelkey1.chatgpt.site/
 
 O repositório já possui uma verificação automática em `scripts/validar-site.mjs` (executada pelo GitHub Actions). Ela confere arquivos, links internos, âncoras, sintaxe de JavaScript e estrutura do banco de 60 questões. **Não substitui** os testes abaixo nem verifica se todos os gabaritos estão matematicamente corretos.
 
@@ -70,7 +70,7 @@ Localmente, com Node.js instalado, é possível executar `python3 scripts/build-
 
 ## 6. Visibilidade em mecanismos de busca — apenas para edição pública autorizada
 
-- [ ] Se desejar que o site seja encontrado em pesquisas, usar o Google Search Console (https://search.google.com/search-console/), verificar a titularidade do domínio/propriedade e enviar o endereço do sitemap da edição pública. A edição privada desta revisão mantém a indexação desabilitada.
+- [ ] Se desejar que o site seja encontrado em pesquisas, usar o Google Search Console (https://search.google.com/search-console/), verificar a titularidade do domínio/propriedade e enviar o endereço do sitemap da edição pública. A prévia privada mantém a indexação desabilitada.
 - [ ] Não prometer indexação imediata ou posição nos resultados: o sitemap facilita descoberta, mas não garante indexação.
 
 ## 7. Encerramento da validação

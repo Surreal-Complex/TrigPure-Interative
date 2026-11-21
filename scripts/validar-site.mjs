@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
 
 const root = process.argv[2] ? resolve(process.argv[2]) : resolve(dirname(fileURLToPath(import.meta.url)), "..", "dist");
+const basePath = (process.argv[3] || '').replace(/\/$/, '');
 const ignored = new Set(['.git', 'node_modules']);
 const issues = [];
 let linksChecked = 0;
@@ -32,7 +33,8 @@ function localTarget(from, href) {
   const path = decode(href.split(/[?#]/)[0]);
   if (!path) return from;
   if (path.startsWith('/')) {
-    return resolve(root, "." + path);
+    const projectPath = basePath && path.startsWith(basePath + '/') ? path.slice(basePath.length) : path;
+    return resolve(root, "." + projectPath);
   }
   return resolve(dirname(from), path);
 }

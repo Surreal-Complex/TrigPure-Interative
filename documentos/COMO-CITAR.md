@@ -1,6 +1,6 @@
 # Como citar o TrigPure Interative
 
-> A autoria consta no diagnóstico acadêmico. Os exemplos citam a edição privada e podem ser ajustados às regras da sua instituição. Informe a data da sua própria consulta.
+> A autoria consta no diagnóstico acadêmico. Os exemplos citam a edição consultada e podem ser ajustados às regras da sua instituição. Informe a data da sua própria consulta.
 
 ## Dados de identificação
 
@@ -10,7 +10,7 @@
 | Autores | Jessica Camily Hildebrandt; Peterson Luiz do Nascimento da Silva |
 | Ano | 2026 |
 | Tipo | Site educacional / recurso educacional digital sobre Trigonometria |
-| URL da edição privada | https://trigonometria-interativa.pastelkey1.chatgpt.site/ |
+| URL da edição consultada | https://trigonometria-interativa.pastelkey1.chatgpt.site/ |
 | Versão do recurso | @@@@ |
 | Instituição/curso/apoio | @@@@ |
 | Data de acesso do leitor | [data da consulta] |

@@ -8,7 +8,7 @@ O **TrigPure Interative** é um ambiente para estudo e ensino de Trigonometria p
 
 ## 2. Acesso e caráter educacional
 
-Esta edição privada está disponível para consulta mediante acesso autorizado na hospedagem. As atividades funcionam no navegador. Exercícios, jogos e explicações têm finalidade pedagógica, não constituem certificação, nota oficial ou substituição automática da orientação docente. A precisão matemática e a acessibilidade precisam de revisão contínua; contato para reportar erros: **@@@@**.
+A edição pública está disponível para consulta. Alterações na edição oficial exigem acesso de escrita ao repositório. As atividades funcionam no navegador. Exercícios, jogos e explicações têm finalidade pedagógica, não constituem certificação, nota oficial ou substituição automática da orientação docente. A precisão matemática e a acessibilidade precisam de revisão contínua; contato para reportar erros: **@@@@**.
 
 ## 3. Direitos sobre conteúdos e software
 

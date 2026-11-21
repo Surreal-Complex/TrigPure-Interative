@@ -18,8 +18,8 @@
 | Projeto, turma, campus (se aplicável) | @@@@ | Documentação do projeto. |
 | Local / ano de criação | @@@@ / 2026 | Confirmar município e ano de publicação. |
 | Versão editorial oficial | @@@@ | Só preencher quando a equipe atribuir/aprovar uma versão. |
-| Base da edição privada | Commit de origem `46c1ea40341bc13d013aa4d50fc8dd073e773a63` | A revisão técnica está em hospedagem privada própria. |
-| URL da edição privada | https://trigonometria-interativa.pastelkey1.chatgpt.site/ | Acesso restrito na hospedagem. |
+| Base desta edição | Commit de origem `46c1ea40341bc13d013aa4d50fc8dd073e773a63` | Versão de referência preservada no histórico do projeto. |
+| URL desta edição | https://trigonometria-interativa.pastelkey1.chatgpt.site/ | Endereço de consulta e citação. |
 | Contato público | @@@@ | Preferir endereço institucional ou próprio para o projeto, com autorização de divulgação. |
 | Licença dos textos, imagens autorais e atividades | @@@@ | Aprovação dos titulares; consultar `LICENCIAMENTO.md`. |
 | Licença do código e jogos autorais | @@@@ | Aprovação dos titulares; consultar `LICENCIAMENTO.md`. |

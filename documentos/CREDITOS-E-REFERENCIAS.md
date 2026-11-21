@@ -1,6 +1,6 @@
 # Créditos, autorias, referências e transparência
 
-> Créditos da edição privada. A autoria geral foi verificada no diagnóstico acadêmico de 23/10/2026. O registro de contribuições individuais e a aprovação final exigem conferência. Veja [os dados verificados e pendências](AUDITORIA-DE-PENDENCIAS.md).
+> Créditos desta edição. A autoria geral foi verificada no diagnóstico acadêmico de 23/10/2026. O registro de contribuições individuais e a aprovação final exigem conferência. Veja [os dados verificados e pendências](AUDITORIA-DE-PENDENCIAS.md).
 
 ## Créditos do projeto
 
