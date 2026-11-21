@@ -41,11 +41,26 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
 
 Abra no navegador `http://127.0.0.1:8000/`. Altere as fontes na raiz e regenere `dist/`. O arquivo `.github/workflows/validacao-site.yml` repete a montagem e as verificações no GitHub. O [guia de validação](GUIA-DE-VALIDACAO-FINAL.md) descreve os testes manuais.
 
-Quando a revisão estiver na branch `main`, entre no repositório com a conta proprietária e abra **Actions → Publicar no GitHub Pages → Run workflow**, selecionando `main`. A publicação depende dessa ação do proprietário. O processo monta os arquivos estáticos, testa os links e envia somente a pasta `dist/` ao Pages. Depois da execução, confira o endereço divulgado em **Settings → Pages**, incluindo a página Sobre e a central documental. Para preparar uma compilação pública local, passe `--public-url` com a URL HTTPS do Pages ao script Python e informe o subcaminho ao validador. Por exemplo:
+### Publicação pelo ChatGPT Sites
+
+Use o projeto **TrigPure Interative** da conta proprietária. A publicação recebe os arquivos de `dist/` e o manifesto `.openai/hosting.json`. Para montar a edição pública, informe o endereço do site ao script e valide a saída:
+
+```sh
+python3 scripts/build-private.py --public-url https://trigonometria-interativa.pastelkey1.chatgpt.site/
+node scripts/validar-site.mjs
+```
+
+Publique a mesma revisão pelo projeto hospedado. Um commit no GitHub registra as fontes da alteração. A publicação no ChatGPT Sites é uma etapa separada.
+
+### Publicação pelo GitHub Pages
+
+Quando Pages estiver habilitado em **Settings → Pages** com fonte **GitHub Actions**, a conta proprietária pode abrir **Actions → Publicar no GitHub Pages → Run workflow**, selecionando `main`. O processo aceita essa branch e a conta proprietária, monta a saída estática e valida os links antes da implantação. Para testar localmente uma compilação do Pages:
 
 ```sh
 python3 scripts/build-private.py --public-url https://surreal-complex.github.io/TrigPure-Interative/
 node scripts/validar-site.mjs dist /TrigPure-Interative
 ```
+
+Depois da publicação, confira o endereço divulgado pela hospedagem, o acesso de visitantes e os documentos de **Sobre**.
 
 A edição anterior do TrigTest está disponível em [um ZIP integral](historico-trigtest-46c1ea4.zip). Para a edição vigente, use este guia, a auditoria atual e os arquivos da branch `main`.

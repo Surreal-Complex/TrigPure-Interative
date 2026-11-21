@@ -2,8 +2,7 @@
 
 Recurso educacional de trigonometria para ensino médio e mediação docente, de Jessica Camily Hildebrandt e Peterson Luiz do Nascimento da Silva. Tem sete abas, dez capítulos, laboratórios interativos, banco de 60 questões, listas, roteiro de investigação e dois jogos. O progresso de estudos é local e opcional.
 
-- [Abrir o site público no GitHub Pages](https://surreal-complex.github.io/TrigPure-Interative/)
-- [Abrir a edição privada de revisão](https://trigonometria-interativa.pastelkey1.chatgpt.site/)
+- [Abrir o TrigPure Interative](https://trigonometria-interativa.pastelkey1.chatgpt.site/)
 - [Guia de edição do site e do código](documentos/GUIA-DE-EDICAO.md)
 - [Pendências: o que falta, como confirmar e onde editar](documentos/AUDITORIA-DE-PENDENCIAS.md)
 - [Guia de preenchimento](documentos/GUIA-DE-PREENCHIMENTO.md) e [roteiro de validação](documentos/GUIA-DE-VALIDACAO-FINAL.md)
@@ -17,7 +16,7 @@ python3 scripts/build-private.py
 node scripts/validar-site.mjs
 ```
 
-Para publicar no GitHub Pages, a conta proprietária executa **Actions → Publicar no GitHub Pages → Run workflow** na branch `main`. A publicação utiliza a saída de `dist/`. Os documentos são editados em `documentos/*.md` e transformados em HTML durante a montagem. O guia de edição contém os caminhos dos módulos, controles, jogos e arquivos de estilo.
+A publicação usa a saída de `dist/`. Consulte o [guia de edição](documentos/GUIA-DE-EDICAO.md) para o projeto hospedado no ChatGPT Sites e para o fluxo de GitHub Pages, que depende de habilitação no repositório. Os documentos são editados em `documentos/*.md` e transformados em HTML durante a montagem. O guia de edição contém os caminhos dos módulos, controles, jogos e arquivos de estilo.
 
 ## Origem e licenças
 
