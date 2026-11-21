@@ -1,0 +1,23 @@
+name: Validacao estatica do site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar Pandoc
+        run: sudo apt-get install -y pandoc
+      - name: Montar e validar arquivos de consulta
+        run: |
+          python3 scripts/build-private.py
+          node scripts/validar-site.mjs

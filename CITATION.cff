@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Se utilizar este recurso educacional digital ou o codigo do projeto em seu trabalho, cite a fonte."
+title: "TrigPure Interative: Aprenda, Explore, Pratique e Jogue"
+type: software
+# Autoria confirmada no diagnóstico acadêmico do projeto.
+authors:
+  - family-names: "Hildebrandt"
+    given-names: "Jessica Camily"
+  - family-names: "Silva"
+    given-names: "Peterson Luiz do Nascimento da"
+url: "https://trigonometria-interativa.pastelkey1.chatgpt.site/"
+abstract: "Recurso educacional digital de Trigonometria com estudo, visualizacoes, exercicios e jogos."
+# Versao do site: @@@@ (adicionar o campo version apenas apos confirmar o numero).
+# Data da versao: @@@@ (adicionar date-released apenas apos confirmar).
+# Licenca: @@@@ (nao declarar ate que titulares aprovem).
+preferred-citation:
+  type: generic
+  authors:
+    - family-names: "Hildebrandt"
+      given-names: "Jessica Camily"
+    - family-names: "Silva"
+      given-names: "Peterson Luiz do Nascimento da"
+  title: "TrigPure Interative: Aprenda, Explore, Pratique e Jogue"
+  year: 2026
+  url: "https://trigonometria-interativa.pastelkey1.chatgpt.site/"
